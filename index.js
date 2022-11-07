@@ -2,7 +2,7 @@ const http = require("http");
 const fs = require("fs");
 
 const hostname = "127.0.0.1";
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 const displayContent = function (file, res) {
   fs.readFile(file, "utf-8", (error, data) => {
